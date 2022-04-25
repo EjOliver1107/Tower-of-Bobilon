@@ -9,10 +9,14 @@
 </head>
 <body>
     <nav>
+        
         <a href="/">Home</a>
+        <a href="/">List</a>
         <% if (user) { %>
-            <a href="/logout">LOG OUT</a>
+            <a href ="/">Create</a>
+            <a href="/logout">Logout</a>
             <% } else { %>
-            <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+            <a href="/auth/google" class="login">Login&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
+        </div>       
     </nav>

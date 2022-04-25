@@ -1,18 +1,36 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: rgb(21, 201, 111);
+  background: black
 }
 
 a {
   color: #00B7FF;
 }
-.login {
+nav {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  height: 34px;
+  height: 35px;
+  background-color: black;
+  border: 5px solid white;
+  
 }
 
+
 .login img {
-  height: 30px;
+  height: 13px;
+
+}
+a {
+  padding: 9px;
+  text-decoration: none;
+  color: rgb(21, 201, 111);
+}
+a:hover {
+  padding: auto;
+  border-bottom: 2px solid rgb(21, 201, 111);
 }
