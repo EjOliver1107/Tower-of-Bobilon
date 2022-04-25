@@ -1,14 +1,13 @@
-const Drink = require('../models/drink');
+// const Drink = require('../models/drinks');
 
 
-module.exports = {
-index
+// module.exports = {
+// index
+// };
 
-};
-
-function index(req, res) {
-    Drink.find({}, function(err, movies) {
-      res.render('movies/index', { title: 'All Movies', movies });
-    });
-  }
+// // function index(req, res) {
+// //     Drink.find({}, function(err, drinks) {
+// //       res.render('drinks/index', { drinks });
+// //     });
+// //   }
   
