@@ -4,7 +4,7 @@ body {
   align-items: center;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: rgb(21, 201, 111);
+  
   background: black
 
 }
@@ -42,11 +42,11 @@ nav {
 a {
   padding: 9px;
   text-decoration: none;
-  color: rgb(21, 201, 111);
+  color: #b8e2e0;
 }
 a:hover {
   padding: auto;
-  border-bottom: 2px solid rgb(21, 201, 111);
+  border-bottom: 5px solid #b8e2e0;;
 }
 main > h1 {
   background-image: linear-gradient(to right, #be97be, #b8e2e0);
@@ -56,7 +56,7 @@ main > h1 {
   height: 50px;
   border: 2px solid white;
 }
-img {
+main > img {
   height: 300px;
   width: 300px;
   object-fit: none;
