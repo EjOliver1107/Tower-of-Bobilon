@@ -13,8 +13,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
+var drinksRouter = require('./routes/drinks');
 var app = express();
 
 // view engine setup
@@ -27,8 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 const isLoggedIn = require('./config/auth');
 
@@ -48,11 +45,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-// Make user available within every EJS template
-app.use(function(req, res, next) {
-  res.locals.user = req.user;
-  next();
-});
+app.use('/', indexRouter);
+app.use('/drinks', drinksRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
