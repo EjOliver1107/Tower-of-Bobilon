@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const drinkSchema = new Schema({
+    title: {
+        type: String,
+        required: true,
+    },
     teaBase: {
         type: String,
         required: true
