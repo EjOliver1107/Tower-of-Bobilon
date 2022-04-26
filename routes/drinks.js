@@ -9,5 +9,7 @@ router.get('/', drinksCtrl.index);
 router.get('/new', drinksCtrl.new);
 // GET /drinks/:id 
 router.get('/:id', drinksCtrl.show);
+// POST /drinks
+router.post('/', isLoggedIn, drinksCtrl.create);
 
 module.exports = router;

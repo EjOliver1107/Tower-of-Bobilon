@@ -1,3 +1,34 @@
 <%- include('../partials/header') %>
-
+<form id="new-form" action="/drinks">
+    <div class="text-inputs">
+        <label>Choose Your Tea Base!</label>
+        <select name="teaBase">
+            <option value="Black Tea">Black Tea</option>   
+            <option value="Green Tea">Green Tea</option>
+            <option value="Oolong Tea">Oolong Tea</option>
+            <option value="Water Base">Water(no Caffeine)</option>
+        </select>
+        <label>Select Your Toppings!</label>
+        <select name="toppings" multiple>
+            <option value="boba">Boba</option>
+            <option value="mini boba">Mini boba</option>
+            <option value="lychee jelly">Lychee jelly</option>
+            <option value="herb jelly">Herb jelly</option>   
+            <option value="pudding">Pudding</option>
+            <option value="aiyu jelly">Aiyu Jelly</option>
+            <option value="creama">Salty Cheese Foam</option>
+        </select>
+        <label>Is this a Milk Tea?</label>
+        <select name="dairyOption">
+            <option value="milk">Milk</option>
+            <option value="non-dairy">Non-Dairy Creamer</option>
+            <option value="no-milk">No Milk</option> 
+        </select>
+        <label>What Makes This Drink <em>Spicy</em>?</label>
+        <input type="text" name="customAddons" placeholder="taro flavoring, strawberry jam, etc."> 
+        <label>Name Your Masterpiece!</label>
+        <input type="text" name="title" placeholder="name your drink!"> 
+        <input type="submit" value="Add Drink">
+    </div>
+</form>
 <%- include('../partials/footer') %>

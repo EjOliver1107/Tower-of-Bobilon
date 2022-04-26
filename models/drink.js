@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const drinkSchema = new Schema({
-    title: {
-        type: String,
-        required: true,
-    },
     teaBase: {
         type: String,
         required: true
@@ -21,6 +17,10 @@ const drinkSchema = new Schema({
     customAddons: {
         type: String,
         required: false
+    },
+    title: {
+        type: String,
+        required: true,
     }
 })
 
