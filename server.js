@@ -8,6 +8,7 @@ var passport = require('passport');
 var methodOverride = require('method-override');
 
 
+
 // connect to the database with Mongoose
 require('dotenv').config();
 require('./config/database');
@@ -17,8 +18,6 @@ var indexRouter = require('./routes/index');
 var drinksRouter = require('./routes/drinks');
 
 var app = express();
-app.use('/', indexRouter);
-app.use('/drinks', drinksRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,13 +38,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
 
+app.use('/', indexRouter);
+app.use('/drinks', drinksRouter);
 
 
 // catch 404 and forward to error handler
