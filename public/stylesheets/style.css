@@ -142,6 +142,3 @@ main > h2, main > h3, main > h4 {
     transform: rotate(360deg);
   }
 }
-option[value="opt2"] {
-  background-image: url("https://i.imgur.com/CNTBzzm.png");
-}
