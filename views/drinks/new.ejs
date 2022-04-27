@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<form id="new-form" action="/drinks">
+<form id="new-form" action="/drinks" method="POST">
     <div class="text-inputs">
         <label>Choose Your Tea Base!</label>
         <div class="tea-base">
@@ -55,18 +55,22 @@
         <input type="text" name="customAddons" placeholder="taro flavoring, strawberry jam, etc."> 
         <label>Name Your Masterpiece!</label>
         <input type="text" name="title" placeholder="name your drink!"> 
-        <input type="submit" value="Add Drink">
+        
     </div>
     <div>
         <label>Choose Your Icon!</label>
-        <div class="tea-base">
-        <select name="teaBase">
-            <option value="Black Tea">Black Tea</option>   
-            <option value="Green Tea">Green Tea</option>
-            <option value="Oolong Tea">Oolong Tea</option>
-            <option value="Water Base">Water(no Caffeine)</option>
+        <div class="Icon">
+        <select name="img" >
+            <option value="template">Choose Your Cup!</option>
+            <option value="opt1"><img src="https://i.imgur.com/ZH4cKFO.png" alt="Option 1"></option>   
+            <option value="opt2"><img src="https://i.imgur.com/CNTBzzm.png" alt="Option 2"></option>
+            <option value="opt3"><img src="https://i.imgur.com/ANVWTJ8.png" alt="Option 3"></option>
+            <option value="opt4"><img src="https://i.imgur.com/tj0Lfxg.png" alt="Option 4"></option>
+            <option value="opt5"><img src="https://i.imgur.com/edh8WmQ.png" alt="Option 5"></option>
+            <option value="opt6"><img src="https://i.imgur.com/jwQ2Oyd.png" alt="Option 6"></option>
         </select>
         </div>
     </div>
+    <input type="submit" value="Add Drink">
 </form>
 <%- include('../partials/footer') %>

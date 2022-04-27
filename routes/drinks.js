@@ -7,9 +7,9 @@ const isLoggedIn = require('../config/auth');
 router.get('/', drinksCtrl.index);
 // GET /drinks/new 
 router.get('/new', drinksCtrl.new);
-// GET /drinks/:id 
-router.get('/:id', drinksCtrl.show);
 // POST /drinks
 router.post('/', isLoggedIn, drinksCtrl.create);
+// GET /drinks/:id 
+router.get('/:id', drinksCtrl.show);
 
 module.exports = router;
