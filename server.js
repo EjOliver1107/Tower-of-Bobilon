@@ -16,6 +16,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var drinksRouter = require('./routes/drinks');
+var reviewsRouter = require('./routes/reviews');
 
 var app = express();
 
@@ -37,6 +38,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+const isLoggedIn = require('./config/auth');
+
 
 // Add this middleware BELOW passport middleware
 app.use(function (req, res, next) {
@@ -46,6 +49,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/drinks', drinksRouter);
+app.use('/', isLoggedIn, reviewsRouter);
 
 
 // catch 404 and forward to error handler
