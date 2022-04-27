@@ -2,22 +2,49 @@
 <form id="new-form" action="/drinks">
     <div class="text-inputs">
         <label>Choose Your Tea Base!</label>
+        <div class="tea-base">
         <select name="teaBase">
             <option value="Black Tea">Black Tea</option>   
             <option value="Green Tea">Green Tea</option>
             <option value="Oolong Tea">Oolong Tea</option>
             <option value="Water Base">Water(no Caffeine)</option>
         </select>
+        </div>
         <label>Select Your Toppings!</label>
-        <select name="toppings" multiple>
-            <option value="boba">Boba</option>
-            <option value="mini boba">Mini boba</option>
-            <option value="lychee jelly">Lychee jelly</option>
-            <option value="herb jelly">Herb jelly</option>   
-            <option value="pudding">Pudding</option>
-            <option value="aiyu jelly">Aiyu Jelly</option>
-            <option value="creama">Salty Cheese Foam</option>
-        </select>
+        <section>
+            <div>
+                <p>Boba</p>
+                <input type="checkbox" name="toppings" value="boba">
+            </div>
+            <div>
+                <p>Mini Boba</p>
+                <input type="checkbox" name="toppings" value="mini boba">
+            </div>
+            <div>
+                <p>Aiyu Jelly</p>
+                <input type="checkbox" name="toppings" value="aiyu jelly">
+            </div>
+            <div>
+                <p>Herb Jelly</p>
+                <input type="checkbox" name="toppings" value="herb jelly">
+            </div>
+            <div>
+                <p>Lychee Jelly</p>
+                <input type="checkbox" name="toppings" value="lychee jelly">
+            </div>
+            <div>
+                <p>Aloe Vera</p>
+                <input type="checkbox" name="toppings" value="aloe vera">
+            </div>
+            <div>
+                <p>Pudding</p>
+                <input type="checkbox" name="toppings" value="pudding">
+            </div>
+            <div>
+                <p>Salty Cheese Foam (Creama)</p>
+                <input type="checkbox" name="toppings" value="creama">
+            </div>                 
+        </section>
         <label>Is this a Milk Tea?</label>
         <select name="dairyOption">
             <option value="milk">Milk</option>
@@ -29,6 +56,17 @@
         <label>Name Your Masterpiece!</label>
         <input type="text" name="title" placeholder="name your drink!"> 
         <input type="submit" value="Add Drink">
+    </div>
+    <div>
+        <label>Choose Your Icon!</label>
+        <div class="tea-base">
+        <select name="teaBase">
+            <option value="Black Tea">Black Tea</option>   
+            <option value="Green Tea">Green Tea</option>
+            <option value="Oolong Tea">Oolong Tea</option>
+            <option value="Water Base">Water(no Caffeine)</option>
+        </select>
+        </div>
     </div>
 </form>
 <%- include('../partials/footer') %>

@@ -7,7 +7,8 @@ const drinkSchema = new Schema({
         required: true
     },
     toppings: {
-        type: String,
+        type: [String],
+        enum: ['boba', 'mini boba'],
         required: false
     },
     dairyOption: {
