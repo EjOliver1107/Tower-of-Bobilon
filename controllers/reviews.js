@@ -1,10 +1,27 @@
+const drink = require('../models/drink');
 const Drink = require('../models/drink');
 
 module.exports = {
     create,
-    delete: deleteReview
+    delete: deleteReview,
+    update
 };
 
+function update(req, res) {
+    console.log(req.params.id);
+    Drink.findOne({'reviews._id': req.params.id}, function(err, drink) {
+        console.log(err);
+        
+        const review = drink.reviews.id(req.params.id);
+        console.log(review);
+        if (!review.user.equals(req.user._id)) return res.redirect(`/drinks/${drink._id}`);
+        review.content = req.body.content;
+        drink.save(function(err) {
+            res.redirect(`/drinks/${drink._id}`);
+        });
+    });
+  }
+  
 function deleteReview(req, res, next) {
     Drink.findOne({'reviews._id': req.params.id}).then(function(drink){
         if (!drink) return res.redirect('/drinks');

@@ -5,9 +5,11 @@ module.exports = {
   index,
   new: newDrink,
   create,
-  show
+  show,
+  
 
 }
+
 
 function show(req, res) {
   console.log(req.params.id);

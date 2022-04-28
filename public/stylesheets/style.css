@@ -9,7 +9,7 @@ body {
   background: black;
   font-family: "Chewy"; 
   background-image: linear-gradient(to right, #be97be, #b8e2e0);
-
+  text-shadow: 5px 5px 10px rgb(61, 61, 61);
   
 }
 main {
