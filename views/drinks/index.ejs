@@ -10,12 +10,15 @@
         <tbody >
             <% drinks.forEach(function(d){ %>
                 <tr>
-                    <td><%= d.img %></td>
+                    <td><img src="/images/<%= d.img %>.png" id="profile"></td>
                     <td><%= d.title %></td>
                     <td><a href="/drinks/<%= d._id %>" id="details-btn">Details</a></td>
                 </tr>
                 <% }) %>
             </tbody>
+            <img src="https://i.imgur.com/SU4D8d1.png" id="happy-cup">
         </table>
+        
+
 </article>
 <%- include('../partials/footer') %>

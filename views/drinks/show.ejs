@@ -1,9 +1,10 @@
 <%- include('../partials/header') %>
 <section id = "show-page">
-    <div><%= drink.img %> </div>
-    <h1>Users Drink</h1>
-    <h2><%= drink.title %></h2>
+    <img src="/images/<%= drink.img %>.png" id="profile-list">
+    <h1><%= user.name %>'s Drink</h1>
+    <h2>"<%= drink.title %>"</h2>
     <h1>Devil in the Details</h1>
+    <div class="did">
     <h2>Tea Base:</h2>
         <h3><%= drink.teaBase %></h3>
     <h2>Toppings:</h2>
@@ -12,13 +13,15 @@
         <h3><%= drink.dairyOption %></h3>
     <h2>What's The ~Spice~</h2>
         <h3><%= drink.customAddons %></h3>  
+    </div>
 </section>
-<section id="reviews"></section>
+<section id="reviews">
 <h1>Reviews</h1>
 <% if (user) { %> 
 <form id="add-review-form" method="POST" action="/drinks/<%= drink._id %>/reviews">
-    <label>Review:</label>
-    <textarea name="content"></textarea>
+    <label>Review:</label><br>
+    <textarea name="content"></textarea><br>
+    <input type="submit" value="Add Review"><br>
     <label>Rating:</label>
     <select name="rating">
         <option value="1">1</option>
@@ -27,11 +30,12 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <input type="submit" value="Add Review">
+    
 </form>
 <% } %> 
 
 <% if (drink.reviews.length) { %>
+  <section id="typing">
     <table>
         <thead>
           <tr>
@@ -47,10 +51,10 @@
           <% drink.reviews.forEach(function(r) { %>
             <% total += r.rating %>
             <tr>
-              <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>"><%= r.userName %></td>
+              <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" id="ava"><br><%= r.userName %></td>
               <td><%= r.createdAt.toLocaleDateString() %></td>
               <td><%= r.content %></td>
-              <td><%= r.rating %></td>
+              <td ><h1 id="rating"><%= r.rating %></h1></td>
               <td>
                 <% if (user && user._id.equals(r.user)) { %>
 
@@ -59,12 +63,15 @@
                   </form>
                 <% } %>
               </td>
-              <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
-                <input type="text" name="content" value="<%= r.content %>">
-                <button type="submit">EDIT COMMENT</button>
+              <form action="/reviews/<%= r._id %>?_method=PUT" method="POST" >
+                <div id="edit">
+                <input type="text" name="content" value="<%= r.content %>"><br>
+                <button type="submit">Edit Comment</button>
+                </div>
                 </form>
                 
-            </tr>
+              </tr>
+            </section>
           <% }); %>
           <tr>
             <td colspan="3"></td>
@@ -75,5 +82,5 @@
     <% } else { %>
       <h5>No Reviews Yet</h5>
     <% } %>
-    
+  </section>
 <%- include('../partials/footer') %>
