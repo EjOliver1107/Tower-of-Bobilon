@@ -64,14 +64,14 @@
                   <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                     <button type="submit" id="Add">X</button>
                   </form>
-                <% } %>
-              </td>
-              <form action="/reviews/<%= r._id %>?_method=PUT" method="POST" >
-                <div id="edit">
-                <input type="text" name="content" value="<%= r.content %>"><br>
-                <button type="submit" id="Add">Edit Comment</button>
-                </div>
+                </td>
+                <form action="/reviews/<%= r._id %>?_method=PUT" method="POST" >
+                  <div id="edit">
+                    <input type="text" name="content" value="<%= r.content %>"><br>
+                    <button type="submit" id="Add">Edit Comment</button>
+                  </div>
                 </form>
+                <% } %>
                 
               </tr>
             </section>
