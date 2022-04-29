@@ -9,8 +9,14 @@
             <option value="Oolong Tea">Oolong Tea</option>
             <option value="Water Base">Water(no Caffeine)</option>
         </select>
-        </div>
-        <label>Select Your Toppings!</label>
+    </div>
+    <label>Is this a Milk Tea?</label>
+    <select name="dairyOption">
+        <option value="milk">Milk</option>
+        <option value="non-dairy">Non-Dairy Creamer</option>
+        <option value="no-milk">No Milk</option> 
+    </select>
+    <label>Select Your Toppings!</label>
         <section class="toppings">
             <div>
                 <p>Boba</p>
@@ -45,12 +51,6 @@
                 <input type="checkbox" name="toppings" value="creama">
             </div>                 
         </section>
-        <label>Is this a Milk Tea?</label>
-        <select name="dairyOption">
-            <option value="milk">Milk</option>
-            <option value="non-dairy">Non-Dairy Creamer</option>
-            <option value="no-milk">No Milk</option> 
-        </select>
         <label>What Makes This Drink <em>Spicy</em>?</label>
         <input type="text" name="customAddons" placeholder="taro flavoring, strawberry jam, etc."> 
         <label>Name Your Masterpiece!</label>
@@ -71,6 +71,6 @@
         </select>
         </div>
     </div>
-    <input type="submit" value="Add Drink">
+    <input type="submit" value="Add Drink" id="Add">
 </form>
 <%- include('../partials/footer') %>

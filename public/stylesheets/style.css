@@ -53,15 +53,15 @@ nav {
   flex-direction: column;
   align-items: center;
   border: 5px solid white;
-  border-radius: 15px
+  border-radius: 45px
   
 }
 #table-show {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: blanchedalmond;
-  border: 2px solid white;
-  border-radius: 5px;
+  border: 5px solid white;
+  border-radius: 15px;
   color: black;
   padding-right: 20px;
 }
@@ -145,6 +145,13 @@ main > img:hover {
   text-align: center;
   color: black;
 }
+textarea , input[name="content"] {
+  background-color: blanchedalmond;
+  color: black;
+  border: 2px solid white;
+  border-radius: 15px;
+  font-family: "Chewy";
+}
 .toppings > div {
   display: flex;
   align-items: center;
@@ -159,7 +166,6 @@ label {
 }
 
 select {
-  display: none;
   appearance: none;
   display: block;
   width: 100%;
@@ -177,7 +183,8 @@ select {
   /* word-break: normal; */
   text-shadow: 3px 3px 8px rgb(61, 61, 61);
   font-family: "Chewy"; 
-
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px
 }
 #reviews {
   background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-bubble-tea-vector-id1177450328?k=20&m=1177450328&s=612x612&w=0&h=Y2HRebOfX0oilswdlr_ga-VxkZK7tcwk4gnMFQEO178=");
@@ -202,6 +209,20 @@ select {
   margin: 10px
   
 }
+#details-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: blanchedalmond;
+  border: 5px solid white;
+  border-radius: 25px;
+  width: ;
+}
+#answer {
+  background-color: #b8e2e0;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 15px;
+}
 #ava {
   height: 30px;
   width: 30px;
@@ -209,6 +230,9 @@ select {
 #typing {
   color:black;
   text-align: center;
+  background-color: blanchedalmond;
+  border: 5px solid white;
+  border-radius: 25px;
 }
 #rating{
   font-size: 20px;
@@ -222,6 +246,7 @@ select {
 #new-form {
   background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-bubble-tea-vector-id1177450328?k=20&m=1177450328&s=612x612&w=0&h=Y2HRebOfX0oilswdlr_ga-VxkZK7tcwk4gnMFQEO178=");
   width: 500px;
+  height: auto;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -229,7 +254,31 @@ select {
   border: 2px solid white;
   border-radius: 15px;
 }
-
+#Add {
+  margin-bottom: 5px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #be97be, #b8e2e0);
+  height: 30px;
+  font-family: "Chewy"; 
+}
+#Add:hover {
+  text-decoration: none;
+  background-image: linear-gradient(to right, black, rgb(119, 119, 119));
+  color: #be97be;
+  text-shadow: 5px 5px 10px rgb(15, 15, 15);
+}
+input[name="customAddons"] , input[name="title"] {
+  border-radius: 15px;
+  border: 2px solid white;
+  background-color: blanchedalmond;
+  font-family: "Chewy";
+}
+input[type="checkbox"]:before {
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 3px;
+}
 #happy-cup {
   margin-top: 10px;
   height: 75px;
@@ -263,7 +312,7 @@ select {
 option {
   background-color: blanchedalmond;
   font-family: "Chewy"; 
-  color: white;
+  color: black;
   text-shadow: 5px 5px 10px rgb(61, 61, 61);
 
 }
