@@ -67,7 +67,7 @@
 
 <details open>   
 <summary>Deployed Link (Heroku)</summary>
-<p><a href=https://tower-of-bobilon.herokuapp.com">DEPLOYED LINK</a></p>
+<p><a href="https://tower-of-bobilon.herokuapp.com">DEPLOYED LINK</a></p>
 </details>
 
 ## :fast_forward: Next Steps   
