@@ -1,24 +1,12 @@
-/*----- constants -----*/
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn")
+var span = document.getElementsByClassName("close")[0];
 
-
-
-/*----- app's state (variables) -----*/
-
-
-
-/*----- cached element references -----*/
-
-
-
-/*----- event listeners -----*/
-
-
-
-/*----- functions -----*/
-
-function optSwitch() {
-
+span.onclick = function() {
+    modal.style.display= "none"
 }
-// if a user selects a opt from the img select tag then
-// it will reperesnt itself as an image.
-console.log('Hello World!')
+window.onclick = function(event) {
+    if (event.target ==modal){
+        modal.style.display = "none"
+    }
+}
