@@ -56,7 +56,7 @@
             <tr>
               <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" id="ava"><br><%= r.userName %></td>
               <td><%= r.createdAt.toLocaleDateString() %></td>
-              <td><%= r.content %></td>
+              <td id="contentbox"><%= r.content %></td>
               <td ><h1 id="rating"><%= r.rating %></h1></td>
               <td>
                 <% if (user && user._id.equals(r.user)) { %>

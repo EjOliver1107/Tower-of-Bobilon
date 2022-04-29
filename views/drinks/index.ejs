@@ -11,7 +11,7 @@
             <% drinks.forEach(function(d){ %>
                 <tr>
                     <td><img src="/images/<%= d.img %>.png" id="profile"></td>
-                    <td><%= d.title %></td>
+                    <td style="text-align: center;"><%= d.title %></td>
                     <td><a href="/drinks/<%= d._id %>" id="details-btn">Details</a></td>
                 </tr>
                 <% }) %>

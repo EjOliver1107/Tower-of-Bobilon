@@ -90,7 +90,7 @@ nav {
 
 #list {
   background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-bubble-tea-vector-id1177450328?k=20&m=1177450328&s=612x612&w=0&h=Y2HRebOfX0oilswdlr_ga-VxkZK7tcwk4gnMFQEO178=");
-  width: 500px;
+  width: 700px;
   height: auto;
   margin-top: 10px;
   display: flex;
@@ -102,7 +102,7 @@ nav {
 }
 #table-show {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   background-color: blanchedalmond;
   border: 5px solid white;
   border-radius: 15px;
@@ -259,6 +259,7 @@ select {
   background-color: blanchedalmond;
   border: 5px solid white;
   border-radius: 25px;
+  margin-bottom: 20px;
 }
 #answer {
   background-color: #b8e2e0;
@@ -276,6 +277,10 @@ select {
   background-color: blanchedalmond;
   border: 5px solid white;
   border-radius: 25px;
+  margin-bottom: 15px;
+}
+#contentbox {
+  max-width: 200px;
 }
 #rating{
   font-size: 20px;
