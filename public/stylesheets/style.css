@@ -44,6 +44,23 @@ nav {
   
 }
 
+#list {
+  background-image: url("https://media.istockphoto.com/vectors/seamless-pattern-bubble-tea-vector-id1177450328?k=20&m=1177450328&s=612x612&w=0&h=Y2HRebOfX0oilswdlr_ga-VxkZK7tcwk4gnMFQEO178=");
+  width: 500px;
+  height: 1000px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+#table-show {
+  margin-top: 10px;
+  background-color: blanchedalmond;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: black;
+}
 
 .login img {
   height: 13px;
@@ -59,6 +76,10 @@ a:hover {
   padding: auto;
   border-bottom: 5px solid #b8e2e0;;
 }
+#details-btn:hover {
+  background-color: #be9ac0;
+}
+
 main > h1 {
   background-image: linear-gradient(to right, #be97be, #b8e2e0);
   color: white;
