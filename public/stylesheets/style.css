@@ -87,11 +87,12 @@ a:hover {
   border-radius: 20px;
 }
 #profile-list {
+  margin-top: 10px;
   border: 2px solid white;
   border-radius: 50px;
   object-fit: fill;
-  height: 10px;
-  width: 10px;
+  height: 100px;
+  width:  100px;
 }
 #profile {
   border: 2px solid white;
